@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071a2b">
+  <meta name="description" content="Congo Quiz : apprends en jouant sur la République du Congo.">
+  <title>Congo Quiz — Apprendre en jouant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark"><i></i><i></i><i></i></span><span>CONGO<span class="brand-light">QUIZ</span></span></a>
+    <span class="country-pill"><span class="flag"></span> RÉPUBLIQUE DU CONGO</span>
+  </header>
+  <main class="container">
+    <section class="hero" id="home">
+      <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> APPRENDRE  DÉCOUVRIR PROGRESSER</div>
+        <h1>Connais-tu vraiment<br>le <span>Congo&nbsp;?</span></h1>
+        <p class="hero-description">Teste tes connaissances sur notre pays, sa géographie, son histoire, sa culture et bien plus encore. Chaque question est une nouvelle découverte.</p>
+        <div class="hero-actions"><button class="button button-primary" id="start-button">Commencer le quiz <span>→</span></button><div class="hero-note">20 questions pour commencer</div></div>
+      </div>
+      <div class="hero-art"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-sun"></div>
+        <div class="art-card"><div class="art-card-top"><span>NOTRE PAYS</span><span class="art-star"></span></div><div class="art-landscape"><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div><div class="river"></div></div><div class="art-card-bottom"><div><strong>République du Congo</strong><small>Brazzaville Afrique centrale</small></div><span class="mini-flag"></span></div></div>
+        <div class="floating-chip chip-top"><span>🇨🇬</span> Culture & patrimoine</div><div class="floating-chip chip-bottom"><span class="chip-icon"></span> Ton savoir, ton score</div>
+      </div>
+    </section>
+    <section class="category-section" aria-labelledby="category-title"><div class="section-heading"><div><div class="eyebrow">EXPLORE LES THÈMES</div><h2 id="category-title">Un pays, mille choses à savoir.</h2></div><p>Choisis un thème pour personnaliser ta partie.</p></div>
+      <div class="category-grid" id="category-grid">
+        <button class="category-card selected" data-category="Toutes"><span class="category-icon icon-all"></span><span class="category-name">Tout mélanger</span><span class="category-detail">Un peu de tout</span><span class="category-arrow">↗</span></button>
+        <button class="category-card" data-category="Géographie"><span class="category-icon icon-geo">⌖</span><span class="category-name">Géographie</span><span class="category-detail">Villes, fleuves, frontières</span><span class="category-arrow">↗</span></button>
+        <button class="category-card" data-category="Histoire"><span class="category-icon icon-history">◷</span><span class="category-name">Histoire & institutions</span><span class="category-detail">Dates et repères</span><span class="category-arrow">↗</span></button>
+        <button class="category-card" data-category="Culture"><span class="category-icon icon-culture">✺</span><span class="category-name">Culture & traditions</span><span class="category-detail">Langues et patrimoine</span><span class="category-arrow">↗</span></button>
+        <button class="category-card" data-category="Sport"><span class="category-icon icon-sport">⚽</span><span class="category-name">Sport</span><span class="category-detail">Football et compétitions</span><span class="category-arrow">↗</span></button>
+        <button class="category-card" data-category="Informatique"><span class="category-icon icon-tech">⌘</span><span class="category-name">Informatique</span><span class="category-detail">Code et numérique</span><span class="category-arrow">↗</span></button>
+      </div>
+    </section>
+    <section class="quiz-section hidden" id="quiz-section"><div class="quiz-heading"><div><div class="eyebrow">À TOI DE JOUER</div><h2>Prêt à relever le défi ?</h2></div><button class="text-button" id="quit-button">Quitter le quiz ×</button></div>
+      <div class="quiz-panel"><div class="quiz-meta"><span class="question-category" id="question-category">Géographie</span><span class="question-counter" id="question-counter">Question 1 / 10</span></div><div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div>
+        <h3 class="question-text" id="question-text"></h3><p class="question-hint">Choisis une seule réponse parmi les trois propositions.</p><div class="answers" id="answers"></div><div class="feedback hidden" id="feedback" role="status" aria-live="polite"></div>
+        <div class="quiz-footer"><span class="score-label">TON SCORE<strong id="live-score">0</strong></span><button class="button button-primary" id="next-button" disabled>Valider la réponse <span>→</span></button></div>
+      </div>
+    </section>
+    <section class="result-section hidden" id="result-section" aria-live="polite"><div class="result-symbol" id="result-symbol">🏆</div><div class="eyebrow">PARTIE TERMINÉE</div><h2 id="result-title">Bien joué !</h2><p id="result-message">Tu as terminé cette partie.</p><div class="result-score"><strong id="final-score">0/10</strong><span>bonnes réponses</span></div><div class="result-track"><div class="result-bar" id="result-bar"></div></div><div class="result-actions"><button class="button button-primary" id="replay-button">Rejouer ↻</button><button class="button button-secondary" id="back-button">Choisir une catégorie</button></div></section>
+    <section class="bottom-banner"><div class="banner-symbol"></div><div><strong>Chaque réponse t'apprend quelque chose.</strong><p>Le Congo se découvre aussi à travers ses histoires, ses lieux et ses talents.</p></div><span class="banner-flag"></span></section>
+  </main>
+  <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark"><i></i><i></i><i></i></span><span>CONGO<span class="brand-light">QUIZ</span></span></a><p>Un projet éducatif indépendant Créé pour apprendre en s'amusant.</p><span>Version 1.0</span></footer>
+</body></html>
